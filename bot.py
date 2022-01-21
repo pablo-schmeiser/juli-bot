@@ -7,6 +7,11 @@ import time
 from dotenv import load_dotenv
 from discord.ext import commands
 
+__author__ = "Pablo Schmeiser (pablau#2861)"
+__copyright__ = "Copyright (C) 2022 Pablo Schmeiser"
+__license__ = "GNU General Public License v3.0"
+__version__ = "1.0.0"
+
 # Stop reaction representative.
 x = ":x:"
 
@@ -101,6 +106,7 @@ async def background_loop(ctx, sec, user):
                 await user.edit(nick = date)
 
 
+# Adds an Event-Date Combination to the list of Events.
 @bot.command(pass_context=True)
 async def addEvent(ctx, date, event):
     try:
@@ -111,10 +117,18 @@ async def addEvent(ctx, date, event):
         await ctx.send("Event has wrong format or could not be converted!")
 
 
+# Prints all Event-Date Combinations.
+@bot.command(pass_context=True)
+async def showEvents(ctx):
+    msg = await ctx.send("Events:")
+    for key, value in dateDict.items():
+        await msg.edit(content = content + "\n" + value + ", " + key)
+
+
 # Shuts down the entire Bot Script.
-@bot.command()
+@bot.command(pass_context=True)
 @commands.is_owner()
-async def shutdown(context):
+async def shutdown(ctx):
     exit()
 
 
