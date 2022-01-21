@@ -1,4 +1,3 @@
-from distutils import command
 import os
 import discord
 from discord import Client
