@@ -1,0 +1,14 @@
+**/log
+**/logs
+**/debug
+**/bin
+**/out
+**/target
+**.log
+**.lock
+**.tmp
+logs
+log
+debug
+**.env
+**.pyc
