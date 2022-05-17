@@ -1,4 +1,4 @@
-# juli-bot
+# juli-bot [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 A Discord bot able to convert a person into a calender.
 
 ## Installation
@@ -21,5 +21,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.html)
+
 ## Authors
 [Pablo Schmeiser (pablau#2861)](https://github.com/pablo-schmeiser)
